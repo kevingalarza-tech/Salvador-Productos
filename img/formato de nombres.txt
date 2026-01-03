@@ -1,0 +1,3 @@
+producto+marca+p
+
+nombre del producto marca y p equivale a la palabra portada 

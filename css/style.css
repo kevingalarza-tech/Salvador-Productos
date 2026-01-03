@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER MEJORADO */
+header {
+    background-color: #1e3a8a; /* Azul */
+    color: white;
+    padding: 10px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-weight: bold;
+    flex: 1;
+    min-width: 200px;
+}
+
+.logo h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 24px;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+.center {
+    flex: 2;
+    text-align: center;
+    font-style: italic;
+    font-size: 16px;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    min-width: 200px;
+}
+
+.right {
+    flex: 1;
+    text-align: right;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.4;
+    min-width: 150px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 30px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.footer-col {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    min-width: 200px;
+}
+
+.whatsapp {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25D366;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.whatsapp:hover {
+    background-color: #128C7E;
+}
+
+.whatsapp-icon {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+/* PRODUCTOS */
+.productos {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.productos h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #1e3a8a;
+}
+
+.grid-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.producto {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.producto-imagen {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+.descripcion {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+    min-height: 60px;
+    flex-grow: 1;
+}
+
+.precio {
+    color: #dc2626; /* Rojo */
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.detalles {
+    color: #059669; /* Verde */
+    font-size: 13px;
+    padding: 0 15px;
+    margin-bottom: 10px;
+    text-align: center;
+    min-height: 40px;
+}
+
+.enlace-tecnico {
+    display: block;
+    text-align: center;
+    background-color: #1e3a8a;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 15px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.enlace-tecnico:hover {
+    background-color: #3b82f6;
+}
+
+/* RESPONSIVE MEJORADO */
+@media (max-width: 992px) {
+    .grid-productos {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* HEADER MÓVIL - ESPACIO REDUCIDO */
+    header {
+        padding: 8px 20px;
+        gap: 10px;
+    }
+    
+    .logo h1 {
+        font-size: 20px;
+    }
+    
+    .center {
+        font-size: 14px;
+        order: 3;
+        width: 100%;
+        min-width: 100%;
+        margin-top: 5px;
+    }
+    
+    .right {
+        text-align: center;
+        font-size: 13px;
+        min-width: auto;
+    }
+    
+    /* PRODUCTOS MÓVIL */
+    .grid-productos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    
+    .producto-imagen {
+        height: 180px;
+    }
+    
+    .descripcion {
+        font-size: 13px;
+        padding: 8px;
+    }
+    
+    .precio {
+        font-size: 20px;
+    }
+    
+    .detalles {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+    
+    /* FOOTER MÓVIL */
+    footer {
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 30px;
+    }
+    
+    .footer-col {
+        width: 100%;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* HEADER MÓVIL PEQUEÑO - MÁS COMPACTO */
+    header {
+        padding: 5px 15px;
+        gap: 8px;
+    }
+    
+    .logo h1 {
+        font-size: 18px;
+    }
+    
+    .center {
+        font-size: 13px;
+        padding: 4px 8px;
+    }
+    
+    .right {
+        font-size: 12px;
+    }
+    
+    /* PRODUCTOS MÓVIL PEQUEÑO */
+    .grid-productos {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .producto-imagen {
+        height: 200px;
+    }
+    
+    .productos {
+        padding: 15px;
+    }
+    
+    /* FOOTER MÓVIL PEQUEÑO */
+    footer {
+        padding: 15px;
+        margin-top: 20px;
+    }
+}
+
+/* EXTRA PEQUEÑO (Menos de 360px) */
+@media (max-width: 359px) {
+    header {
+        padding: 5px 10px;
+    }
+    
+    .logo h1 {
+        font-size: 16px;
+    }
+    
+    .center {
+        font-size: 12px;
+    }
+    
+    .right {
+        font-size: 11px;
+    }
+}
